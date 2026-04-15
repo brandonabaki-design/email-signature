@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon A. Baki - Email Signature</title>
     <style>
-        /* Page Styling for Presentation Only */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f3f4f6;
@@ -16,7 +15,6 @@
             margin: 0;
             min-height: 100vh;
         }
-
         .container {
             background-color: white;
             padding: 40px;
@@ -25,14 +23,12 @@
             max-width: 800px;
             width: 100%;
         }
-
         h2 {
             color: #1f2937;
             margin-top: 0;
             border-bottom: 2px solid #e5e7eb;
             padding-bottom: 10px;
         }
-
         .instructions {
             background-color: #eff6ff;
             border-left: 4px solid #3b82f6;
@@ -42,7 +38,6 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
-
         .btn {
             background-color: #2563eb;
             color: white;
@@ -52,27 +47,21 @@
             cursor: pointer;
             font-size: 14px;
             font-weight: 600;
-            transition: background-color 0.2s;
             margin-top: 20px;
             display: inline-flex;
             align-items: center;
             gap: 8px;
         }
-
-        .btn:hover {
-            background-color: #1d4ed8;
-        }
-
+        .btn:hover { background-color: #1d4ed8; }
         .signature-wrapper {
             border: 1px dashed #cbd5e1;
             padding: 20px;
             margin-top: 20px;
             background: #fff;
         }
-
         textarea {
             width: 100%;
-            height: 150px;
+            height: 200px;
             margin-top: 20px;
             padding: 10px;
             border: 1px solid #cbd5e1;
@@ -91,81 +80,147 @@
         <div class="instructions">
             <strong>How to install:</strong>
             <ol>
-                <li>Click the "Select Signature" button below.</li>
-                <li>Press <strong>Ctrl+C</strong> (Windows) or <strong>Cmd+C</strong> (Mac) to copy.</li>
-                <li>Go to your Email Settings (Outlook, Gmail, etc.).</li>
-                <li>Paste into the signature box.</li>
-                <li><strong>Repository Note:</strong> The image is set to load <code>Headshot_3.png</code> from the same folder as this HTML file.</li>
+                <li>Click "Select Signature" below.</li>
+                <li>Press <strong>Ctrl+C</strong> (Windows) / <strong>Cmd+C</strong> (Mac) to copy.</li>
+                <li>Paste into Gmail / Outlook signature settings.</li>
+                <li><strong>Images:</strong> Headshot and AI for Educators logo are placeholders — once the raw PNG files are embedded as base64 data URIs, they will paste with the signature and never need to load.</li>
             </ol>
         </div>
 
         <!-- VISUAL SIGNATURE START -->
         <div class="signature-wrapper" id="signature-render">
-            
-            <!-- START OF EMAIL SIGNATURE CODE -->
-            <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.4; font-size: 14px; color: #333333; max-width: 600px;">
+
+            <!-- ================= EMAIL SIGNATURE ================= -->
+            <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.4; font-size: 14px; color: #333333; max-width: 640px;">
                 <tr>
                     <!-- Photo Column -->
-                    <td valign="top" style="padding-right: 25px; width: 120px;">
-                        <img src="Headshot_3.png" 
-                             alt="Brandon A. Baki" 
-                             width="120" 
-                             height="120" 
-                             style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: top center; border: 3px solid #e5e7eb; display: block;">
+                    <td valign="top" style="padding-right: 22px; width: 120px;">
+                        <img src="Headshot_3.png"
+                             alt="Brandon A. Baki"
+                             width="120" height="120"
+                             style="width:120px; height:120px; border-radius:50%; object-fit:cover; object-position:top center; border:3px solid #e5e7eb; display:block;">
+                        <!-- AI for Educators Logo under headshot -->
+                        <img src="AI_for_Educators_Logo.png"
+                             alt="AI for Educators"
+                             width="120"
+                             style="width:120px; height:auto; display:block; margin-top:12px;">
                     </td>
-                    
+
                     <!-- Vertical Divider -->
-                    <td valign="top" style="border-left: 2px solid #1e3a8a; width: 1px; padding-right: 25px;"></td>
-                    
+                    <td valign="top" style="border-left: 2px solid #1e3a8a; width: 1px; padding-right: 22px;"></td>
+
                     <!-- Content Column -->
                     <td valign="top">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                            
-                            <!-- Name & Title -->
+                            <!-- Name -->
                             <tr>
-                                <td style="padding-bottom: 6px;">
+                                <td style="padding-bottom: 4px;">
                                     <span style="font-size: 22px; font-weight: 700; color: #111827; letter-spacing: -0.5px; line-height: 1.2;">Brandon A. Baki</span>
                                 </td>
                             </tr>
+                            <!-- Title 1 -->
+                            <tr>
+                                <td style="padding-bottom: 6px;">
+                                    <span style="font-size: 14px; color: #1e3a8a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Head of AI and Innovation</span><br>
+                                    <span style="font-size: 13px; color: #4b5563; font-style: italic;">American International School in Abu Dhabi</span>
+                                </td>
+                            </tr>
+                            <!-- Title 2 - Founder -->
                             <tr>
                                 <td style="padding-bottom: 12px;">
-                                    <span style="font-size: 14px; color: #1e3a8a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Head of Curriculum, Teaching and Learning</span><br>
-                                    <span style="font-size: 14px; color: #4b5563; font-style: italic;">Al Wahda Private School</span>
+                                    <span style="font-size: 13px; color: #0d9488; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Founder</span>
+                                    <span style="font-size: 13px; color: #4b5563;"> &middot; </span>
+                                    <span style="font-size: 13px; color: #4b5563; font-style: italic;">AI for Educators Community</span>
                                 </td>
                             </tr>
 
                             <!-- Education & Certs -->
                             <tr>
-                                <td style="padding-bottom: 15px; font-size: 12px; color: #4b5563; line-height: 1.6;">
+                                <td style="padding-bottom: 12px; font-size: 12px; color: #4b5563; line-height: 1.6;">
                                     <div style="margin-bottom: 3px;">
-                                        <strong style="color: #374151;">M.Ed.</strong> Education - University of Wollongong <span style="color: #9ca3af; font-size: 11px;">(Final Stage)</span>
+                                        <strong style="color: #374151;">M.Ed.</strong> Education &mdash; University of Wollongong <span style="color: #9ca3af; font-size: 11px;">(Final Stage)</span>
                                     </div>
                                     <div style="margin-bottom: 3px;">
-                                        <strong style="color: #374151;">B.Ed.</strong> Elementary Education - American University of Beirut
+                                        <strong style="color: #374151;">B.Ed.</strong> Elementary Education &mdash; American University of Beirut
                                     </div>
                                     <div>
-                                        <span style="color: #1e3a8a;">&#10003;</span> Designated Safeguarding Lead - Level 3
+                                        <span style="color: #1e3a8a;">&#10003;</span> Designated Safeguarding Lead &mdash; Level 3
                                     </div>
                                 </td>
                             </tr>
 
-                            <!-- Contact Divider -->
+                            <!-- Divider -->
                             <tr>
-                                <td style="border-top: 1px solid #e5e7eb; padding-top: 12px;"></td>
+                                <td style="border-top: 1px solid #e5e7eb; padding-top: 10px;"></td>
                             </tr>
 
                             <!-- Contact Info -->
                             <tr>
-                                <td style="font-size: 12px; color: #1f2937;">
+                                <td style="font-size: 12px; color: #1f2937; padding-bottom: 10px;">
                                     <table cellpadding="0" cellspacing="0" border="0">
                                         <tr>
-                                            <td style="padding-right: 20px;">
-                                                <span style="color: #1e3a8a; font-weight: bold; font-size: 14px;">&#9990;</span> 
+                                            <td style="padding-right: 18px;">
+                                                <span style="color: #1e3a8a; font-weight: bold; font-size: 14px;">&#9990;</span>
                                                 <a href="tel:+971507896519" style="color: #374151; text-decoration: none; font-weight: 600;">+971 50 789 6519</a>
                                             </td>
                                             <td>
-                                                <span style="color: #1e3a8a; font-weight: bold; font-size: 14px;">&#9873;</span> 
+                                                <span style="color: #1e3a8a; font-weight: bold; font-size: 14px;">&#9873;</span>
                                                 <span style="color: #374151;">Abu Dhabi, UAE</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- Social Buttons (inline SVG icons - no loading) -->
+                            <tr>
+                                <td style="padding-top: 4px;">
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <!-- LinkedIn -->
+                                            <td style="padding-right: 8px;">
+                                                <a href="https://www.linkedin.com/in/brandon-a-baki-19a81735b/" style="text-decoration:none; display:inline-block;">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="background-color:#0A66C2; border-radius:6px;">
+                                                        <tr>
+                                                            <td style="padding:6px 10px 6px 8px; vertical-align:middle;">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle;">
+                                                                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.66H9.33V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.38-1.86 3.61 0 4.28 2.37 4.28 5.46v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+                                                                </svg>
+                                                                <span style="color:#ffffff; font-size:12px; font-weight:600; font-family:'Segoe UI',Tahoma,sans-serif; vertical-align:middle; margin-left:6px;">LinkedIn</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </a>
+                                            </td>
+                                            <!-- YouTube -->
+                                            <td style="padding-right: 8px;">
+                                                <a href="https://www.youtube.com/@AIforEducators-AE" style="text-decoration:none; display:inline-block;">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="background-color:#FF0000; border-radius:6px;">
+                                                        <tr>
+                                                            <td style="padding:6px 10px 6px 8px; vertical-align:middle;">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle;">
+                                                                    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/>
+                                                                </svg>
+                                                                <span style="color:#ffffff; font-size:12px; font-weight:600; font-family:'Segoe UI',Tahoma,sans-serif; vertical-align:middle; margin-left:6px;">YouTube</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </a>
+                                            </td>
+                                            <!-- WhatsApp -->
+                                            <td>
+                                                <a href="https://chat.whatsapp.com/DSIG8n8bSliJRORaethdYl" style="text-decoration:none; display:inline-block;">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="background-color:#25D366; border-radius:6px;">
+                                                        <tr>
+                                                            <td style="padding:6px 10px 6px 8px; vertical-align:middle;">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" style="display:inline-block; vertical-align:middle;">
+                                                                    <path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2s0-.3.1-.5c.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1.1 2.8 1.2 3c.1.2 2.1 3.2 5 4.4.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.2.8.8-3.1-.2-.3A8.3 8.3 0 0 1 3.7 12 8.3 8.3 0 0 1 12 3.7a8.3 8.3 0 0 1 8.3 8.3 8.3 8.3 0 0 1-8.3 8.3z"/>
+                                                                </svg>
+                                                                <span style="color:#ffffff; font-size:12px; font-weight:600; font-family:'Segoe UI',Tahoma,sans-serif; vertical-align:middle; margin-left:6px;">WhatsApp</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </a>
                                             </td>
                                         </tr>
                                     </table>
@@ -175,7 +230,7 @@
                     </td>
                 </tr>
             </table>
-            <!-- END OF EMAIL SIGNATURE CODE -->
+            <!-- ================= END SIGNATURE ================= -->
 
         </div>
         <!-- VISUAL SIGNATURE END -->
@@ -185,88 +240,21 @@
             Select Signature
         </button>
         <span id="copy-msg" style="margin-left: 10px; color: #059669; opacity: 0; transition: opacity 0.5s;">Selected! Now press Ctrl+C / Cmd+C</span>
-
-        <h3 style="margin-top: 40px; font-size: 16px;">Raw HTML Code (for advanced users)</h3>
-        <textarea readonly onclick="this.select()">
-<table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.4; font-size: 14px; color: #333333; max-width: 600px;">
-    <tr>
-        <td valign="top" style="padding-right: 25px; width: 120px;">
-            <img src="Headshot_3.png" alt="Brandon A. Baki" width="120" height="120" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: top center; border: 3px solid #e5e7eb; display: block;">
-        </td>
-        <td valign="top" style="border-left: 2px solid #1e3a8a; width: 1px; padding-right: 25px;"></td>
-        <td valign="top">
-            <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                <tr>
-                    <td style="padding-bottom: 6px;">
-                        <span style="font-size: 22px; font-weight: 700; color: #111827; letter-spacing: -0.5px; line-height: 1.2;">Brandon A. Baki</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding-bottom: 12px;">
-                        <span style="font-size: 14px; color: #1e3a8a; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Head of Curriculum, Teaching and Learning</span><br>
-                        <span style="font-size: 14px; color: #4b5563; font-style: italic;">Al Wahda Private School</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding-bottom: 15px; font-size: 12px; color: #4b5563; line-height: 1.6;">
-                        <div style="margin-bottom: 3px;">
-                            <strong style="color: #374151;">M.Ed.</strong> Education - University of Wollongong <span style="color: #9ca3af; font-size: 11px;">(Final Stage)</span>
-                        </div>
-                        <div style="margin-bottom: 3px;">
-                            <strong style="color: #374151;">B.Ed.</strong> Elementary Education - American University of Beirut
-                        </div>
-                        <div>
-                            <span style="color: #1e3a8a;">&#10003;</span> Designated Safeguarding Lead - Level 3
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="border-top: 1px solid #e5e7eb; padding-top: 12px;"></td>
-                </tr>
-                <tr>
-                    <td style="font-size: 12px; color: #1f2937;">
-                        <table cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td style="padding-right: 20px;">
-                                    <span style="color: #1e3a8a; font-weight: bold; font-size: 14px;">&#9990;</span> 
-                                    <a href="tel:+971507896519" style="color: #374151; text-decoration: none; font-weight: 600;">+971 50 789 6519</a>
-                                </td>
-                                <td>
-                                    <span style="color: #1e3a8a; font-weight: bold; font-size: 14px;">&#9873;</span> 
-                                    <span style="color: #374151;">Abu Dhabi, UAE</span>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-        </textarea>
     </div>
 
     <script>
         function selectSignature() {
             const node = document.getElementById('signature-render');
-            
-            if (document.body.createTextRange) {
-                const range = document.body.createTextRange();
-                range.moveToElementText(node);
-                range.select();
-            } else if (window.getSelection) {
+            if (window.getSelection) {
                 const selection = window.getSelection();
                 const range = document.createRange();
                 range.selectNodeContents(node);
                 selection.removeAllRanges();
                 selection.addRange(range);
             }
-
             const msg = document.getElementById('copy-msg');
             msg.style.opacity = '1';
-            setTimeout(() => {
-                msg.style.opacity = '0';
-            }, 3000);
+            setTimeout(() => { msg.style.opacity = '0'; }, 3000);
         }
     </script>
 </body>
